@@ -15,6 +15,8 @@ Disponibilizar visibilidade em tempo real do PCP sem depender do módulo padrão
 4. **Agente Auditor**
    - Identifica anomalias (ex: OP encerrada sem consumo).
    - Envia alertas para responsáveis antes de rodar o PCP.
+5. **Configuração**
+   - Variáveis de ambiente em `.env` (ver `.env.example`).
 
 ## Fluxo de dados
 ```mermaid
@@ -28,3 +30,5 @@ flowchart LR
 1. **Alertas operacionais**: alertas em Teams/Email/Telegram.
 2. **Simulador de cenários**: cálculo de disponibilidade futura (estoque + OPs - carteira).
 3. **Escrita segura**: integração via API REST/ADVPL para apontamentos e baixas.
+
+> Nota: esta versão consolida a resolução dos conflitos apontados no PR.

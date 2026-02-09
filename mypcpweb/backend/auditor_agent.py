@@ -37,3 +37,16 @@ class AuditorAgent:
                 )
             )
         return alerts
+
+
+def format_alerts(alerts: List[AuditorAlert]) -> str:
+    linhas = []
+    for alert in alerts:
+        linhas.append(f"[{alert.tipo}] {alert.mensagem}")
+    return "\n".join(linhas)
+
+
+if __name__ == "__main__":
+    print(
+        "Execute este módulo em um ambiente configurado com DB_* para gerar alertas."
+    )

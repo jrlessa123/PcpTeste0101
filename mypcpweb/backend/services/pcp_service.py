@@ -1,4 +1,8 @@
+import logging
+
 from database import queries
+
+logger = logging.getLogger(__name__)
 
 class PCPService:
     def __init__(self, cnxn, filial, empresa="010"):
@@ -17,8 +21,8 @@ class PCPService:
                 cursor.execute(query)
             columns = [column[0] for column in cursor.description]
             return [dict(zip(columns, row)) for row in cursor.fetchall()]
-        except Exception as e:
-            print(f"Erro ao executar a consulta: {e}")
+        except Exception:
+            logger.exception("Erro ao executar a consulta")
             return None
 
     def get_estoque(self):
