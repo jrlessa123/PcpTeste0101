@@ -1,0 +1,155 @@
+
+============================================================
+TOP 10: SB1 (Produto)
+============================================================
+Colunas: ['B1_FILIAL', 'B1_COD', 'B1_DESC', 'B1_UM', 'D_E_L_E_T_']
+{'B1_FILIAL': '  ', 'B1_COD': '        10001  ', 'B1_DESC': 'MICROCOMPUTADOR PORTATIL DELL INSPIRON                      ', 'B1_UM': 'PC', 'D_E_L_E_T_': ' '}
+{'B1_FILIAL': '  ', 'B1_COD': '   158794      ', 'B1_DESC': 'BURETA GRADUADA  C/ TORNEIRA TEFLON                         ', 'B1_UM': 'UN', 'D_E_L_E_T_': ' '}
+{'B1_FILIAL': '  ', 'B1_COD': '   83652       ', 'B1_DESC': 'RESISTENCIA 40 CM TERMOSTATO MOD 400TE 220V SULPACK 500W    ', 'B1_UM': 'UN', 'D_E_L_E_T_': ' '}
+{'B1_FILIAL': '  ', 'B1_COD': '  89046        ', 'B1_DESC': 'CARTE TES V3                                                ', 'B1_UM': 'PC', 'D_E_L_E_T_': ' '}
+{'B1_FILIAL': '  ', 'B1_COD': ' 00000030      ', 'B1_DESC': 'CJ CIELA MOTOR MNWM X 10/ X12                               ', 'B1_UM': 'UN', 'D_E_L_E_T_': ' '}
+{'B1_FILIAL': '  ', 'B1_COD': ' 14253         ', 'B1_DESC': 'PISTOLA VOYLET                                              ', 'B1_UM': 'UN', 'D_E_L_E_T_': ' '}
+{'B1_FILIAL': '  ', 'B1_COD': ' 25462         ', 'B1_DESC': 'COIFA DE PAREDE AGRATTO 90 CM 127V VIDRO                    ', 'B1_UM': 'UN', 'D_E_L_E_T_': ' '}
+{'B1_FILIAL': '  ', 'B1_COD': ' 545444        ', 'B1_DESC': 'COTOVELO 04MM COM ROSCA 1/8                                 ', 'B1_UM': 'UN', 'D_E_L_E_T_': ' '}
+{'B1_FILIAL': '  ', 'B1_COD': ' 567890        ', 'B1_DESC': '36005548 ABRACAD.FECHADA CONDULETE TOP 3/4 CZ TIGRE         ', 'B1_UM': 'UN', 'D_E_L_E_T_': ' '}
+{'B1_FILIAL': '  ', 'B1_COD': ' 88327         ', 'B1_DESC': 'FITA BR 29MMX20MTS FLORAPAC                                 ', 'B1_UM': 'UN', 'D_E_L_E_T_': ' '}
+
+============================================================
+TOP 10: SB2 (Estoque)
+============================================================
+Colunas: ['B2_FILIAL', 'B2_COD', 'B2_QATU', 'B2_RESERVA', 'B2_LOCAL', 'D_E_L_E_T_']
+{'B2_FILIAL': '01', 'B2_COD': '               ', 'B2_QATU': 0.0, 'B2_RESERVA': 0.0, 'B2_LOCAL': '87', 'D_E_L_E_T_': ' '}
+{'B2_FILIAL': '09', 'B2_COD': '               ', 'B2_QATU': 0.0, 'B2_RESERVA': 0.0, 'B2_LOCAL': '38', 'D_E_L_E_T_': ' '}
+{'B2_FILIAL': '01', 'B2_COD': '        10001  ', 'B2_QATU': 0.0, 'B2_RESERVA': 0.0, 'B2_LOCAL': '50', 'D_E_L_E_T_': ' '}
+{'B2_FILIAL': '01', 'B2_COD': '        10001  ', 'B2_QATU': 0.0, 'B2_RESERVA': 0.0, 'B2_LOCAL': '08', 'D_E_L_E_T_': ' '}
+{'B2_FILIAL': '01', 'B2_COD': '        10001  ', 'B2_QATU': 0.0, 'B2_RESERVA': 0.0, 'B2_LOCAL': '2 ', 'D_E_L_E_T_': ' '}
+{'B2_FILIAL': '03', 'B2_COD': '        10001  ', 'B2_QATU': 0.0, 'B2_RESERVA': 0.0, 'B2_LOCAL': '50', 'D_E_L_E_T_': ' '}
+{'B2_FILIAL': '02', 'B2_COD': '        10001  ', 'B2_QATU': 0.0, 'B2_RESERVA': 0.0, 'B2_LOCAL': '50', 'D_E_L_E_T_': ' '}
+{'B2_FILIAL': '04', 'B2_COD': '        10001  ', 'B2_QATU': 0.0, 'B2_RESERVA': 0.0, 'B2_LOCAL': '50', 'D_E_L_E_T_': ' '}
+{'B2_FILIAL': '06', 'B2_COD': '        10001  ', 'B2_QATU': 0.0, 'B2_RESERVA': 0.0, 'B2_LOCAL': '50', 'D_E_L_E_T_': ' '}
+{'B2_FILIAL': '05', 'B2_COD': '        10001  ', 'B2_QATU': 0.0, 'B2_RESERVA': 0.0, 'B2_LOCAL': '50', 'D_E_L_E_T_': ' '}
+
+============================================================
+TOP 10: SC2 (OPs)
+============================================================
+Colunas: ['C2_FILIAL', 'C2_NUM', 'C2_PRODUTO', 'C2_QUANT', 'C2_QUJE', 'C2_STATUS', 'C2_DATPRI', 'C2_DATPRF', 'D_E_L_E_T_']
+{'C2_FILIAL': '01', 'C2_NUM': '042425', 'C2_PRODUTO': 'PA110100324    ', 'C2_QUANT': 100.0, 'C2_QUJE': 0.0, 'C2_STATUS': 'N', 'C2_DATPRI': '20260209', 'C2_DATPRF': '20260209', 'D_E_L_E_T_': ' '}
+{'C2_FILIAL': '01', 'C2_NUM': '042425', 'C2_PRODUTO': 'PA110100325    ', 'C2_QUANT': 400.0, 'C2_QUJE': 0.0, 'C2_STATUS': 'N', 'C2_DATPRI': '20260209', 'C2_DATPRF': '20260209', 'D_E_L_E_T_': ' '}
+{'C2_FILIAL': '01', 'C2_NUM': '042425', 'C2_PRODUTO': 'PI0023         ', 'C2_QUANT': 400.0, 'C2_QUJE': 0.0, 'C2_STATUS': 'N', 'C2_DATPRI': '20260209', 'C2_DATPRF': '20260209', 'D_E_L_E_T_': ' '}
+{'C2_FILIAL': '01', 'C2_NUM': '042424', 'C2_PRODUTO': 'PA110100332    ', 'C2_QUANT': 87.0, 'C2_QUJE': 86.0, 'C2_STATUS': 'N', 'C2_DATPRI': '20260209', 'C2_DATPRF': '20260209', 'D_E_L_E_T_': ' '}
+{'C2_FILIAL': '01', 'C2_NUM': '042424', 'C2_PRODUTO': 'PA110100333    ', 'C2_QUANT': 348.0, 'C2_QUJE': 344.0, 'C2_STATUS': 'N', 'C2_DATPRI': '20260209', 'C2_DATPRF': '20260209', 'D_E_L_E_T_': ' '}
+{'C2_FILIAL': '01', 'C2_NUM': '042424', 'C2_PRODUTO': 'PI0023         ', 'C2_QUANT': 348.0, 'C2_QUJE': 344.0, 'C2_STATUS': 'N', 'C2_DATPRI': '20260209', 'C2_DATPRF': '20260209', 'D_E_L_E_T_': ' '}
+{'C2_FILIAL': '01', 'C2_NUM': '042423', 'C2_PRODUTO': '243            ', 'C2_QUANT': 1388.0, 'C2_QUJE': 0.0, 'C2_STATUS': 'N', 'C2_DATPRI': '20260210', 'C2_DATPRF': '20260210', 'D_E_L_E_T_': ' '}
+{'C2_FILIAL': '01', 'C2_NUM': '042423', 'C2_PRODUTO': '2431           ', 'C2_QUANT': 33312.0, 'C2_QUJE': 0.0, 'C2_STATUS': 'N', 'C2_DATPRI': '20260210', 'C2_DATPRF': '20260210', 'D_E_L_E_T_': ' '}
+{'C2_FILIAL': '01', 'C2_NUM': '042423', 'C2_PRODUTO': 'PI0013         ', 'C2_QUANT': 33312.0, 'C2_QUJE': 0.0, 'C2_STATUS': 'N', 'C2_DATPRI': '20260210', 'C2_DATPRF': '20260210', 'D_E_L_E_T_': ' '}
+{'C2_FILIAL': '01', 'C2_NUM': '042422', 'C2_PRODUTO': '20             ', 'C2_QUANT': 941.0, 'C2_QUJE': 0.0, 'C2_STATUS': 'N', 'C2_DATPRI': '20260210', 'C2_DATPRF': '20260210', 'D_E_L_E_T_': ' '}
+
+============================================================
+TOP 10: SC5 (Pedido cabeçalho)
+============================================================
+Erro: ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'C5_VEND'. (207) (SQLExecDirectW)")
+
+============================================================
+TOP 10: SC6 (Pedido itens)
+============================================================
+Colunas: ['C6_FILIAL', 'C6_NUM', 'C6_ITEM', 'C6_PRODUTO', 'C6_DESCRI', 'C6_QTDVEN', 'C6_QTDENT', 'C6_ENTREG', 'C6_NOTA', 'C6_SERIE', 'C6_BLQ', 'D_E_L_E_T_']
+{'C6_FILIAL': '01', 'C6_NUM': 'AABZ11', 'C6_ITEM': '01', 'C6_PRODUTO': 'PA100300009    ', 'C6_DESCRI': 'LEITE FERMENTADO 100G (PT C/30)                             ', 'C6_QTDVEN': 1.0, 'C6_QTDENT': 0.0, 'C6_ENTREG': '20260209', 'C6_NOTA': '         ', 'C6_SERIE': '   ', 'C6_BLQ': '  ', 'D_E_L_E_T_': ' '}
+{'C6_FILIAL': '01', 'C6_NUM': 'AABZ11', 'C6_ITEM': '02', 'C6_PRODUTO': 'PA100200081    ', 'C6_DESCRI': 'DIA A DIA MORANGO SACHE 800G (CX C/ 12)                     ', 'C6_QTDVEN': 1.0, 'C6_QTDENT': 0.0, 'C6_ENTREG': '20260209', 'C6_NOTA': '         ', 'C6_SERIE': '   ', 'C6_BLQ': '  ', 'D_E_L_E_T_': ' '}
+{'C6_FILIAL': '01', 'C6_NUM': 'AABZ11', 'C6_ITEM': '03', 'C6_PRODUTO': 'PA100200083    ', 'C6_DESCRI': 'DIA A DIA VITAMINA DE FRUTAS SACHE 800G (CX C/ 12)          ', 'C6_QTDVEN': 1.0, 'C6_QTDENT': 0.0, 'C6_ENTREG': '20260209', 'C6_NOTA': '         ', 'C6_SERIE': '   ', 'C6_BLQ': '  ', 'D_E_L_E_T_': ' '}
+{'C6_FILIAL': '01', 'C6_NUM': 'AABZ11', 'C6_ITEM': '04', 'C6_PRODUTO': '228            ', 'C6_DESCRI': 'FLAMBYNHO MOR. C/ BANANA H.DO LANCHE 480G (CX C/12)         ', 'C6_QTDVEN': 1.0, 'C6_QTDENT': 0.0, 'C6_ENTREG': '20260209', 'C6_NOTA': '         ', 'C6_SERIE': '   ', 'C6_BLQ': '  ', 'D_E_L_E_T_': ' '}
+{'C6_FILIAL': '01', 'C6_NUM': 'AABZ11', 'C6_ITEM': '05', 'C6_PRODUTO': '243            ', 'C6_DESCRI': 'NATURAL DESNATADO 120G (CX C/24)                            ', 'C6_QTDVEN': 1.0, 'C6_QTDENT': 0.0, 'C6_ENTREG': '20260209', 'C6_NOTA': '         ', 'C6_SERIE': '   ', 'C6_BLQ': '  ', 'D_E_L_E_T_': ' '}
+{'C6_FILIAL': '01', 'C6_NUM': 'AABZ11', 'C6_ITEM': '06', 'C6_PRODUTO': '246            ', 'C6_DESCRI': 'NATURAL INTEGRAL 120G (CX C/24)                             ', 'C6_QTDVEN': 1.0, 'C6_QTDENT': 0.0, 'C6_ENTREG': '20260209', 'C6_NOTA': '         ', 'C6_SERIE': '   ', 'C6_BLQ': '  ', 'D_E_L_E_T_': ' '}
+{'C6_FILIAL': '01', 'C6_NUM': 'AABZ11', 'C6_ITEM': '07', 'C6_PRODUTO': 'PA100100007    ', 'C6_DESCRI': 'FLAMBOYANT NATURAL ZERO LACTOSE 120G (CX 24)                ', 'C6_QTDVEN': 1.0, 'C6_QTDENT': 0.0, 'C6_ENTREG': '20260209', 'C6_NOTA': '         ', 'C6_SERIE': '   ', 'C6_BLQ': '  ', 'D_E_L_E_T_': ' '}
+{'C6_FILIAL': '01', 'C6_NUM': 'AABZ11', 'C6_ITEM': '08', 'C6_PRODUTO': 'PA100200073    ', 'C6_DESCRI': 'DIA A DIA VITAMINA DE FRUTAS 170G (PT C/ 30)                ', 'C6_QTDVEN': 1.0, 'C6_QTDENT': 0.0, 'C6_ENTREG': '20260209', 'C6_NOTA': '         ', 'C6_SERIE': '   ', 'C6_BLQ': '  ', 'D_E_L_E_T_': ' '}
+{'C6_FILIAL': '01', 'C6_NUM': 'AABZ11', 'C6_ITEM': '09', 'C6_PRODUTO': 'PA100200075    ', 'C6_DESCRI': 'DIA A DIA MORANGO 170G (PT C/ 30)                           ', 'C6_QTDVEN': 1.0, 'C6_QTDENT': 0.0, 'C6_ENTREG': '20260209', 'C6_NOTA': '         ', 'C6_SERIE': '   ', 'C6_BLQ': '  ', 'D_E_L_E_T_': ' '}
+{'C6_FILIAL': '01', 'C6_NUM': 'AABZ11', 'C6_ITEM': '10', 'C6_PRODUTO': '197            ', 'C6_DESCRI': 'SUPREME MORANGO COPO 120G (CX C/24)                         ', 'C6_QTDVEN': 1.0, 'C6_QTDENT': 0.0, 'C6_ENTREG': '20260209', 'C6_NOTA': '         ', 'C6_SERIE': '   ', 'C6_BLQ': '  ', 'D_E_L_E_T_': ' '}
+
+============================================================
+TOP 10: SF2 (NF Saída cabeçalho)
+============================================================
+Colunas: ['F2_FILIAL', 'F2_DOC', 'F2_SERIE', 'F2_CLIENTE', 'F2_LOJA', 'F2_EMISSAO', 'F2_VALBRUT', 'D_E_L_E_T_']
+{'F2_FILIAL': '01', 'F2_DOC': '000481843', 'F2_SERIE': '1  ', 'F2_CLIENTE': '000678', 'F2_LOJA': '01', 'F2_EMISSAO': '20260209', 'F2_VALBRUT': 2582.9, 'D_E_L_E_T_': ' '}
+{'F2_FILIAL': '01', 'F2_DOC': '000481844', 'F2_SERIE': '1  ', 'F2_CLIENTE': '000678', 'F2_LOJA': '01', 'F2_EMISSAO': '20260209', 'F2_VALBRUT': 1330.12, 'D_E_L_E_T_': ' '}
+{'F2_FILIAL': '01', 'F2_DOC': '000481845', 'F2_SERIE': '1  ', 'F2_CLIENTE': '001847', 'F2_LOJA': '01', 'F2_EMISSAO': '20260209', 'F2_VALBRUT': 2915.67, 'D_E_L_E_T_': ' '}
+{'F2_FILIAL': '01', 'F2_DOC': '000481846', 'F2_SERIE': '1  ', 'F2_CLIENTE': '001847', 'F2_LOJA': '01', 'F2_EMISSAO': '20260209', 'F2_VALBRUT': 1477.87, 'D_E_L_E_T_': ' '}
+{'F2_FILIAL': '01', 'F2_DOC': '000481847', 'F2_SERIE': '1  ', 'F2_CLIENTE': '006044', 'F2_LOJA': '01', 'F2_EMISSAO': '20260209', 'F2_VALBRUT': 2504.79, 'D_E_L_E_T_': ' '}
+{'F2_FILIAL': '01', 'F2_DOC': '000481848', 'F2_SERIE': '1  ', 'F2_CLIENTE': '006044', 'F2_LOJA': '01', 'F2_EMISSAO': '20260209', 'F2_VALBRUT': 1330.12, 'D_E_L_E_T_': ' '}
+{'F2_FILIAL': '01', 'F2_DOC': '000481849', 'F2_SERIE': '1  ', 'F2_CLIENTE': '000676', 'F2_LOJA': '01', 'F2_EMISSAO': '20260209', 'F2_VALBRUT': 2873.29, 'D_E_L_E_T_': ' '}
+{'F2_FILIAL': '01', 'F2_DOC': '000481850', 'F2_SERIE': '1  ', 'F2_CLIENTE': '000676', 'F2_LOJA': '01', 'F2_EMISSAO': '20260209', 'F2_VALBRUT': 1457.82, 'D_E_L_E_T_': ' '}
+{'F2_FILIAL': '01', 'F2_DOC': '000481851', 'F2_SERIE': '1  ', 'F2_CLIENTE': '000680', 'F2_LOJA': '01', 'F2_EMISSAO': '20260209', 'F2_VALBRUT': 2322.79, 'D_E_L_E_T_': ' '}
+{'F2_FILIAL': '01', 'F2_DOC': '000481852', 'F2_SERIE': '1  ', 'F2_CLIENTE': '000681', 'F2_LOJA': '01', 'F2_EMISSAO': '20260209', 'F2_VALBRUT': 1256.21, 'D_E_L_E_T_': ' '}
+
+============================================================
+TOP 10: SD2 (NF Saída itens)
+============================================================
+Colunas: ['D2_FILIAL', 'D2_DOC', 'D2_SERIE', 'D2_PEDIDO', 'D2_ITEM', 'D2_COD', 'D2_QUANT', 'D2_TOTAL', 'D_E_L_E_T_']
+{'D2_FILIAL': '01', 'D2_DOC': '000481980', 'D2_SERIE': '1  ', 'D2_PEDIDO': 'AABYY6', 'D2_ITEM': '01', 'D2_COD': '6401           ', 'D2_QUANT': 1.0, 'D2_TOTAL': 102.71, 'D_E_L_E_T_': ' '}
+{'D2_FILIAL': '01', 'D2_DOC': '000481980', 'D2_SERIE': '1  ', 'D2_PEDIDO': 'AABYY6', 'D2_ITEM': '02', 'D2_COD': '6404           ', 'D2_QUANT': 1.0, 'D2_TOTAL': 102.71, 'D_E_L_E_T_': ' '}
+{'D2_FILIAL': '01', 'D2_DOC': '000481980', 'D2_SERIE': '1  ', 'D2_PEDIDO': 'AABYY6', 'D2_ITEM': '03', 'D2_COD': '6405           ', 'D2_QUANT': 1.0, 'D2_TOTAL': 102.71, 'D_E_L_E_T_': ' '}
+{'D2_FILIAL': '01', 'D2_DOC': '000481980', 'D2_SERIE': '1  ', 'D2_PEDIDO': 'AABYY6', 'D2_ITEM': '04', 'D2_COD': '6416           ', 'D2_QUANT': 1.0, 'D2_TOTAL': 106.61, 'D_E_L_E_T_': ' '}
+{'D2_FILIAL': '01', 'D2_DOC': '000481980', 'D2_SERIE': '1  ', 'D2_PEDIDO': 'AABYY6', 'D2_ITEM': '05', 'D2_COD': '6417           ', 'D2_QUANT': 1.0, 'D2_TOTAL': 106.61, 'D_E_L_E_T_': ' '}
+{'D2_FILIAL': '01', 'D2_DOC': '000481980', 'D2_SERIE': '1  ', 'D2_PEDIDO': 'AABYY6', 'D2_ITEM': '06', 'D2_COD': '6420           ', 'D2_QUANT': 1.0, 'D2_TOTAL': 106.61, 'D_E_L_E_T_': ' '}
+{'D2_FILIAL': '01', 'D2_DOC': '000481980', 'D2_SERIE': '1  ', 'D2_PEDIDO': 'AABYY6', 'D2_ITEM': '07', 'D2_COD': '6421           ', 'D2_QUANT': 1.0, 'D2_TOTAL': 106.61, 'D_E_L_E_T_': ' '}
+{'D2_FILIAL': '01', 'D2_DOC': '000481980', 'D2_SERIE': '1  ', 'D2_PEDIDO': 'AABYY6', 'D2_ITEM': '08', 'D2_COD': '6407           ', 'D2_QUANT': 1.0, 'D2_TOTAL': 126.93, 'D_E_L_E_T_': ' '}
+{'D2_FILIAL': '01', 'D2_DOC': '000481979', 'D2_SERIE': '1  ', 'D2_PEDIDO': 'AABYZB', 'D2_ITEM': '01', 'D2_COD': '6419           ', 'D2_QUANT': 1.0, 'D2_TOTAL': 95.94, 'D_E_L_E_T_': ' '}
+{'D2_FILIAL': '01', 'D2_DOC': '000481979', 'D2_SERIE': '1  ', 'D2_PEDIDO': 'AABYZB', 'D2_ITEM': '02', 'D2_COD': '6440           ', 'D2_QUANT': 1.0, 'D2_TOTAL': 104.68, 'D_E_L_E_T_': ' '}
+
+============================================================
+TOP 10: SA1 (Cliente)
+============================================================
+Colunas: ['A1_FILIAL', 'A1_COD', 'A1_LOJA', 'A1_NOME', 'A1_END', 'D_E_L_E_T_']
+{'A1_FILIAL': '  ', 'A1_COD': '000001', 'A1_LOJA': '01', 'A1_NOME': 'MALDONATO & FREITAS LTDA (SUPERMERCADO UNIAO (V1-PA)        ', 'A1_END': 'AVE BARAO DO RIO BRANCO, S/N                                                                        ', 'D_E_L_E_T_': ' '}
+{'A1_FILIAL': '  ', 'A1_COD': '000002', 'A1_LOJA': '01', 'A1_NOME': 'RONALDO FONSECA DE LIRA                                     ', 'A1_END': 'PCA DO OPERARIO - TERM. RODOVIARIO - PLAT. B6                                                       ', 'D_E_L_E_T_': ' '}
+{'A1_FILIAL': '  ', 'A1_COD': '000003', 'A1_LOJA': '01', 'A1_NOME': 'LOJA JOMOVEIS LTDA                                          ', 'A1_END': 'TRAV. BENJAMIM CONSTANT, Nº 13                                                                      ', 'D_E_L_E_T_': ' '}
+{'A1_FILIAL': '  ', 'A1_COD': '000004', 'A1_LOJA': '01', 'A1_NOME': 'ABIMAEL DE LIMA SOUZA JUNIOR (V2-PA)                        ', 'A1_END': 'ROD. BR 316 - TERMINAL ROD. EDIGAR TITAN, S/N                                                       ', 'D_E_L_E_T_': ' '}
+{'A1_FILIAL': '  ', 'A1_COD': '000005', 'A1_LOJA': '01', 'A1_NOME': 'HOTEL DURMA BEM - ME (V2-PA)                                ', 'A1_END': 'TRAV. IRMA ADELAIDE , Nº 348                                                                        ', 'D_E_L_E_T_': ' '}
+{'A1_FILIAL': '  ', 'A1_COD': '000006', 'A1_LOJA': '01', 'A1_NOME': 'MERKESEDEK ROCHA DA SILVA (CASA DA CARNE (V1-PA)            ', 'A1_END': 'AV. CELSO MACHADO , S/N                                                                             ', 'D_E_L_E_T_': ' '}
+{'A1_FILIAL': '  ', 'A1_COD': '000007', 'A1_LOJA': '01', 'A1_NOME': 'ELENILCE VIANA DA SILVA                                     ', 'A1_END': 'AL. ABOLICAO, Nº 124                                                                                ', 'D_E_L_E_T_': ' '}
+{'A1_FILIAL': '  ', 'A1_COD': '000008', 'A1_LOJA': '01', 'A1_NOME': 'LAILSON FERREIRA DO NASCIMENTO (MERC.BOM PRECO (V1-PA)      ', 'A1_END': 'RUA 7 DE SETEMBRO, S/N                                                                              ', 'D_E_L_E_T_': ' '}
+{'A1_FILIAL': '  ', 'A1_COD': '000009', 'A1_LOJA': '01', 'A1_NOME': 'CLAUDIA MARIA DA SILVA E SILVA (MERCADINHO CANAA II (V1-PA) ', 'A1_END': 'AV. BARAO DO RIO BRANCO, S/N                                                                        ', 'D_E_L_E_T_': ' '}
+{'A1_FILIAL': '  ', 'A1_COD': '000010', 'A1_LOJA': '01', 'A1_NOME': 'JOSE ANAISSE DE OLIVEIRA (MERC. SAO FRANCISCO (V1-PA)       ', 'A1_END': 'AV. BARAO DO RIO BRANCO, S/N                                                                        ', 'D_E_L_E_T_': ' '}
+
+============================================================
+TOP 10: SA3 (Vendedor)
+============================================================
+Colunas: ['A3_FILIAL', 'A3_COD', 'A3_NOME', 'D_E_L_E_T_']
+{'A3_FILIAL': '  ', 'A3_COD': '000001', 'A3_NOME': 'FABRICA - EXTERNO                       ', 'D_E_L_E_T_': ' '}
+{'A3_FILIAL': '  ', 'A3_COD': '000002', 'A3_NOME': 'DIST AIKY                               ', 'D_E_L_E_T_': ' '}
+{'A3_FILIAL': '  ', 'A3_COD': '000003', 'A3_NOME': 'FLAMBOYANT                              ', 'D_E_L_E_T_': ' '}
+{'A3_FILIAL': '  ', 'A3_COD': '01    ', 'A3_NOME': 'FABRICA - INTERNO                       ', 'D_E_L_E_T_': ' '}
+{'A3_FILIAL': '  ', 'A3_COD': 'ADM   ', 'A3_NOME': 'ADMINISTRADOR                           ', 'D_E_L_E_T_': ' '}
+{'A3_FILIAL': '  ', 'A3_COD': 'B1    ', 'A3_NOME': 'TESTE                                   ', 'D_E_L_E_T_': ' '}
+{'A3_FILIAL': '  ', 'A3_COD': 'B2    ', 'A3_NOME': '***                                     ', 'D_E_L_E_T_': ' '}
+{'A3_FILIAL': '  ', 'A3_COD': 'B3    ', 'A3_NOME': '***                                     ', 'D_E_L_E_T_': ' '}
+{'A3_FILIAL': '  ', 'A3_COD': 'BRK1AM', 'A3_NOME': 'FILIAL AM                               ', 'D_E_L_E_T_': ' '}
+{'A3_FILIAL': '  ', 'A3_COD': 'BRK1PA', 'A3_NOME': 'MR FRIOS                                ', 'D_E_L_E_T_': ' '}
+
+============================================================
+TOP 10: DAI (Itens da Carga / Romaneio)
+============================================================
+Colunas: ['DAI_FILIAL', 'DAI_COD', 'DAI_SEQCAR', 'DAI_PEDIDO', 'DAI_CLIENT', 'DAI_VENDED', 'DAI_NFISCA', 'DAI_DTCHEG', 'D_E_L_E_T_']
+{'DAI_FILIAL': '01', 'DAI_COD': '075749', 'DAI_SEQCAR': '01', 'DAI_PEDIDO': 'AABZ11', 'DAI_CLIENT': '018063', 'DAI_VENDED': '      ', 'DAI_NFISCA': '         ', 'DAI_DTCHEG': '20260209', 'D_E_L_E_T_': ' '}
+{'DAI_FILIAL': '01', 'DAI_COD': '075748', 'DAI_SEQCAR': '01', 'DAI_PEDIDO': 'AABZ08', 'DAI_CLIENT': '037407', 'DAI_VENDED': '      ', 'DAI_NFISCA': '         ', 'DAI_DTCHEG': '20260209', 'D_E_L_E_T_': ' '}
+{'DAI_FILIAL': '01', 'DAI_COD': '075747', 'DAI_SEQCAR': '01', 'DAI_PEDIDO': 'AABZ05', 'DAI_CLIENT': '405398', 'DAI_VENDED': '      ', 'DAI_NFISCA': '000481956', 'DAI_DTCHEG': '20260209', 'D_E_L_E_T_': ' '}
+{'DAI_FILIAL': '01', 'DAI_COD': '075747', 'DAI_SEQCAR': '01', 'DAI_PEDIDO': 'AABZ04', 'DAI_CLIENT': '040911', 'DAI_VENDED': '      ', 'DAI_NFISCA': '000481957', 'DAI_DTCHEG': '20260209', 'D_E_L_E_T_': ' '}
+{'DAI_FILIAL': '01', 'DAI_COD': '075745', 'DAI_SEQCAR': '01', 'DAI_PEDIDO': 'AABZ03', 'DAI_CLIENT': '000710', 'DAI_VENDED': '      ', 'DAI_NFISCA': '         ', 'DAI_DTCHEG': '20260209', 'D_E_L_E_T_': ' '}
+{'DAI_FILIAL': '01', 'DAI_COD': '075743', 'DAI_SEQCAR': '01', 'DAI_PEDIDO': 'AABZ02', 'DAI_CLIENT': '041135', 'DAI_VENDED': '      ', 'DAI_NFISCA': '         ', 'DAI_DTCHEG': '20260209', 'D_E_L_E_T_': ' '}
+{'DAI_FILIAL': '01', 'DAI_COD': '075738', 'DAI_SEQCAR': '01', 'DAI_PEDIDO': 'AABZ01', 'DAI_CLIENT': '404427', 'DAI_VENDED': '      ', 'DAI_NFISCA': '         ', 'DAI_DTCHEG': '20260209', 'D_E_L_E_T_': ' '}
+{'DAI_FILIAL': '01', 'DAI_COD': '075743', 'DAI_SEQCAR': '01', 'DAI_PEDIDO': 'AABZ00', 'DAI_CLIENT': '405011', 'DAI_VENDED': '      ', 'DAI_NFISCA': '         ', 'DAI_DTCHEG': '20260209', 'D_E_L_E_T_': ' '}
+{'DAI_FILIAL': '01', 'DAI_COD': '075738', 'DAI_SEQCAR': '01', 'DAI_PEDIDO': 'AABYZZ', 'DAI_CLIENT': '404427', 'DAI_VENDED': '      ', 'DAI_NFISCA': '         ', 'DAI_DTCHEG': '20260209', 'D_E_L_E_T_': ' '}
+{'DAI_FILIAL': '01', 'DAI_COD': '075743', 'DAI_SEQCAR': '01', 'DAI_PEDIDO': 'AABYZX', 'DAI_CLIENT': '020814', 'DAI_VENDED': '      ', 'DAI_NFISCA': '         ', 'DAI_DTCHEG': '20260209', 'D_E_L_E_T_': ' '}
+
+============================================================
+TOP 10: DAK (Cargas)
+============================================================
+Colunas: ['DAK_FILIAL', 'DAK_COD', 'DAK_SEQCAR', 'DAK_DATA', 'DAK_FEZNF', 'DAK_ACECAR', 'DAK_DATENT', 'D_E_L_E_T_']
+{'DAK_FILIAL': '07', 'DAK_COD': '018996', 'DAK_SEQCAR': '01', 'DAK_DATA': '20260209', 'DAK_FEZNF': '1', 'DAK_ACECAR': '2', 'DAK_DATENT': '        ', 'D_E_L_E_T_': ' '}
+{'DAK_FILIAL': '01', 'DAK_COD': '075695', 'DAK_SEQCAR': '01', 'DAK_DATA': '20260209', 'DAK_FEZNF': '1', 'DAK_ACECAR': '2', 'DAK_DATENT': '        ', 'D_E_L_E_T_': ' '}
+{'DAK_FILIAL': '01', 'DAK_COD': '075696', 'DAK_SEQCAR': '01', 'DAK_DATA': '20260209', 'DAK_FEZNF': '1', 'DAK_ACECAR': '2', 'DAK_DATENT': '        ', 'D_E_L_E_T_': ' '}
+{'DAK_FILIAL': '01', 'DAK_COD': '075697', 'DAK_SEQCAR': '01', 'DAK_DATA': '20260209', 'DAK_FEZNF': '1', 'DAK_ACECAR': '2', 'DAK_DATENT': '        ', 'D_E_L_E_T_': ' '}
+{'DAK_FILIAL': '01', 'DAK_COD': '075698', 'DAK_SEQCAR': '01', 'DAK_DATA': '20260209', 'DAK_FEZNF': '1', 'DAK_ACECAR': '2', 'DAK_DATENT': '        ', 'D_E_L_E_T_': ' '}
+{'DAK_FILIAL': '01', 'DAK_COD': '075699', 'DAK_SEQCAR': '01', 'DAK_DATA': '20260209', 'DAK_FEZNF': '1', 'DAK_ACECAR': '2', 'DAK_DATENT': '        ', 'D_E_L_E_T_': ' '}
+{'DAK_FILIAL': '01', 'DAK_COD': '075700', 'DAK_SEQCAR': '01', 'DAK_DATA': '20260209', 'DAK_FEZNF': '2', 'DAK_ACECAR': '2', 'DAK_DATENT': '        ', 'D_E_L_E_T_': ' '}
+{'DAK_FILIAL': '01', 'DAK_COD': '075701', 'DAK_SEQCAR': '01', 'DAK_DATA': '20260209', 'DAK_FEZNF': '1', 'DAK_ACECAR': '2', 'DAK_DATENT': '        ', 'D_E_L_E_T_': ' '}
+{'DAK_FILIAL': '01', 'DAK_COD': '075702', 'DAK_SEQCAR': '01', 'DAK_DATA': '20260209', 'DAK_FEZNF': '1', 'DAK_ACECAR': '2', 'DAK_DATENT': '        ', 'D_E_L_E_T_': ' '}
+{'DAK_FILIAL': '07', 'DAK_COD': '018997', 'DAK_SEQCAR': '01', 'DAK_DATA': '20260209', 'DAK_FEZNF': '1', 'DAK_ACECAR': '2', 'DAK_DATENT': '        ', 'D_E_L_E_T_': ' '}

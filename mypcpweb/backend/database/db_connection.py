@@ -40,7 +40,7 @@ if __name__ == '__main__':
     # Cria o arquivo .env (se não existir) com as suas credenciais
     if not os.path.exists('.env'):
         with open('.env', 'w') as f:
-            f.write(f"DB_SERVER=10.0.255.102\n")
+            f.write(f"DB_SERVER=192.168.163.20\n")
             f.write(f"DB_DATABASE=PROTHEUS11\n")
             f.write(f"DB_USER=sa\n")
             f.write(f"DB_PASSWORD=Flamb@2014\n")
