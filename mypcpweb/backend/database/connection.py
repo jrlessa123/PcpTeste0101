@@ -20,7 +20,7 @@ def get_db_connection(config: AppConfig, database: str | None = None):
 
 
 def get_conn(database: str = "PCP_DB"):
-    """Compatibility wrapper for API dependencies and routes."""
+    """Compatibility wrapper used by API dependencies and routes."""
     config = AppConfig.from_env()
     db_name = database
 

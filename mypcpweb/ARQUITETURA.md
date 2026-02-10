@@ -1,7 +1,9 @@
-# Arquitetura mínima - PCP Shadow
+# Arquitetura Backend (fase atual)
 
-## Objetivo
-Disponibilizar visibilidade em tempo real do PCP sem depender do módulo padrão do Protheus, mantendo o Protheus como sistema de registro e evitando escrita direta no banco.
+## Premissas
+- PCP em `PCP_DB` (schema `pcp`).
+- Protheus sem REST disponível (uso de SQL fallback read-only).
+- Motor de cálculo no backend FastAPI.
 
 ## Componentes (MVP)
 1. **Leitura direta do banco (SQL Server/Oracle)**
@@ -19,6 +21,13 @@ Disponibilizar visibilidade em tempo real do PCP sem depender do módulo padrão
 5. **Configuração**
    - Variáveis de ambiente em `.env` (ver `.env.example`).
 
+## Componentes (API de planejamento)
+- `backend/adapters/protheus_sql_adapter.py`: leitura de itens/estoque do Protheus via SQL.
+- `backend/api/routes/stock.py`: snapshot para `pcp.plan_stock_snapshot`.
+- `backend/api/routes/mrp.py`: PARTE A (`/calc-production`) e PARTE B (`/explode-mrp`).
+- `backend/api/services/planning_service.py`: cálculo determinístico da produção requerida.
+- `backend/api/services/mrp_*`: explosão e consolidação de materiais.
+
 ## Fluxo de dados
 ```mermaid
 flowchart LR
@@ -26,6 +35,12 @@ flowchart LR
     B --> C[Dashboard MVP]
     B --> D[Agente Auditor]
 ```
+
+## Fluxo (API)
+1. `POST /plans`
+2. `POST /plans/{id}/snapshot-stock`
+3. `POST /plans/{id}/calc-production`
+4. `POST /plans/{id}/explode-mrp`
 
 ## Explorador de tabelas (diagnóstico)
 Execute `python -m backend.run_explore` (na pasta `mypcpweb`) para rodar **TOP 10** em SB1, SB2, SC2, SC5, SC6, SF2, SD2 e SA1. Use para:
@@ -39,5 +54,3 @@ Opção: `python -m backend.run_explore --file saida.txt` grava o resultado em a
 1. **Alertas operacionais**: alertas em Teams/Email/Telegram.
 2. **Simulador de cenários**: cálculo de disponibilidade futura (estoque + OPs - carteira).
 3. **Escrita segura**: integração via API REST/ADVPL para apontamentos e baixas.
-
-> Nota: esta versão consolida a resolução dos conflitos apontados no PR.

@@ -23,9 +23,9 @@ class AppConfig:
 
         return cls(
             db_driver=os.getenv("DB_DRIVER", "ODBC Driver 17 for SQL Server"),
-            db_server=os.getenv("DB_SERVER", ""),
-            db_user=db_user,
-            db_pass=db_pass,
+            db_server=os.getenv("DB_SERVER", "") or os.getenv("PCP_DB_SERVER", ""),
+            db_user=db_user or os.getenv("PCP_DB_UID", ""),
+            db_pass=db_pass or os.getenv("PCP_DB_PWD", ""),
             db_name=db_name,
             pcp_db_name=os.getenv("PCP_DB_NAME", db_name or "PCP_DB"),
             protheus_db_name=os.getenv("PROTHEUS_DB_NAME", db_name),

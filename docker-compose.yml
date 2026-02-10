@@ -1,0 +1,56 @@
+version: '3.9'
+
+services:
+  pcp-api:
+    build:
+      context: ./mypcpweb
+      dockerfile: Dockerfile
+    container_name: pcp-api
+    env_file:
+      - ./mypcpweb/.env
+    environment:
+      DB_DRIVER: ${DB_DRIVER:-ODBC Driver 18 for SQL Server}
+      DB_SERVER: ${PCP_DB_SERVER}
+      DB_USER: ${PCP_DB_UID}
+      DB_PASS: ${PCP_DB_PWD}
+      DB_NAME: ${PCP_DB_NAME:-PCP_DB}
+      PCP_DB_NAME: ${PCP_DB_NAME:-PCP_DB}
+      PROTHEUS_DB_NAME: ${PROTHEUS_DB_NAME:-}
+      FILIAL: ${FILIAL:-01}
+      EMPRESA: ${EMPRESA:-010}
+      REDIS_URL: redis://redis:6379/0
+      PROTHEUS_CONN_STR: ${PROTHEUS_CONN_STR:-}
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
+    container_name: pcp-redis
+    ports:
+      - "6379:6379"
+
+  worker:
+    profiles: ["worker"]
+    build:
+      context: ./mypcpweb
+      dockerfile: Dockerfile
+    container_name: pcp-worker
+    env_file:
+      - ./mypcpweb/.env
+    environment:
+      DB_DRIVER: ${DB_DRIVER:-ODBC Driver 18 for SQL Server}
+      DB_SERVER: ${PCP_DB_SERVER}
+      DB_USER: ${PCP_DB_UID}
+      DB_PASS: ${PCP_DB_PWD}
+      DB_NAME: ${PCP_DB_NAME:-PCP_DB}
+      PCP_DB_NAME: ${PCP_DB_NAME:-PCP_DB}
+      PROTHEUS_DB_NAME: ${PROTHEUS_DB_NAME:-}
+      FILIAL: ${FILIAL:-01}
+      EMPRESA: ${EMPRESA:-010}
+      REDIS_URL: redis://redis:6379/0
+      PROTHEUS_CONN_STR: ${PROTHEUS_CONN_STR:-}
+    command: ["celery", "-A", "mypcpweb.backend.worker.celery_app", "worker", "-l", "info"]
+    depends_on:
+      - redis
