@@ -1,115 +1,83 @@
-import json
-import time
 import pyodbc
-from pathlib import Path
 
-from config import AppConfig
-
-# Ordem de preferência para driver ODBC (mais recente primeiro)
-_SQL_DRIVERS = [
-    "ODBC Driver 19 for SQL Server",
-    "ODBC Driver 18 for SQL Server",
-    "ODBC Driver 17 for SQL Server",
-]
+from mypcpweb.backend.config import AppConfig
 
 
-def _resolve_driver(config: AppConfig) -> str:
-    """Usa o driver do config se estiver instalado; senão o primeiro disponível (19/18/17)."""
-    requested = (config.db_driver or "").strip()
-    installed = {d for d in pyodbc.drivers()}
-    if requested and requested in installed:
-        return requested
-    for name in _SQL_DRIVERS:
-        if name in installed:
-            return name
-    return requested or _SQL_DRIVERS[-1]
+def build_connection_string(
+    config: AppConfig, 
+    database: str | None = None,
+    server: str | None = None,
+    user: str | None = None,
+    password: str | None = None,
+) -> str:
+    """
+    Builder único de connection string para SQL Server.
+    Permite sobrescrever DB/Server/User/Pass quando necessário.
+    """
 
+    db = database or config.db_name
+    srv = server or config.db_server
+    uid = user or config.db_user
+    pwd = password or config.db_pass
 
-DEBUG_LOG_PATH = Path(
-    r"c:\Users\Administrador\Documents\PcpTeste0101\.cursor\debug.log"
-)
-
-
-def _agent_log(hypothesis_id: str, message: str, data: dict) -> None:
-    """Pequeno helper de log para debug da conexão com o banco."""
-    payload = {
-        "id": f"log_{int(time.time() * 1000)}",
-        "timestamp": int(time.time() * 1000),
-        "runId": "initial-run",
-        "hypothesisId": hypothesis_id,
-        "location": "backend/database/connection.py",
-        "message": message,
-        "data": data,
-    }
-    try:
-        DEBUG_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
-        with DEBUG_LOG_PATH.open("a", encoding="utf-8") as f:
-            f.write(json.dumps(payload, ensure_ascii=False) + "\n")
-    except Exception:
-        # Nunca deixar o log quebrar a aplicação.
-        pass
-
-
-def build_connection_string(config: AppConfig) -> str:
-    driver = _resolve_driver(config)
-    # region agent log
-    _agent_log(
-        "H1_env_config",
-        "Construindo connection string",
-        {
-            "db_driver_requested": config.db_driver,
-            "db_driver_resolved": driver,
-            "db_server": config.db_server,
-            "db_name_empty": not bool(config.db_name),
-            "db_user_empty": not bool(config.db_user),
-            "db_pass_empty": not bool(config.db_pass),
-        },
-    )
-    # endregion
-    # Força TCP ao usar IP (evita "Pipes Nomeados" em servidor remoto)
-    server = (config.db_server or "").strip()
-    if server and "\\" not in server and "," not in server:
-        server = f"{server},1433"
     return (
-        f"DRIVER={{{driver}}};"
-        f"SERVER={server};"
-        f"DATABASE={config.db_name};"
-        f"UID={config.db_user};"
-        f"PWD={config.db_pass};"
+        f"DRIVER={{{config.db_driver}}};"
+        f"SERVER={srv};"
+        f"DATABASE={db};"
+        f"UID={uid};"
+        f"PWD={pwd};"
         "TrustServerCertificate=yes;"
-        "Connection Timeout=15;"
     )
 
 
-def get_db_connection(config: AppConfig):
-    # region agent log
-    _agent_log(
-        "H2_connectivity",
-        "Tentando abrir conexão com SQL Server",
-        {
-            "db_server": config.db_server,
-            "db_name": config.db_name,
-            "db_user": config.db_user,
-        },
+def get_db_connection(
+    config: AppConfig,
+    database: str | None = None,
+    server: str | None = None,
+    user: str | None = None,
+    password: str | None = None,
+):
+    return pyodbc.connect(
+        build_connection_string(
+            config,
+            database=database,
+            server=server,
+            user=user,
+            password=password,
+        )
     )
-    # endregion
 
-    try:
-        cnxn = pyodbc.connect(build_connection_string(config))
-        # region agent log
-        _agent_log(
-            "H3_success_path",
-            "Conexão estabelecida com sucesso",
-            {"ok": True},
+
+def get_conn(database: str = "PCP_DB"):
+    """
+    Compatibility wrapper usado por rotas e dependências FastAPI.
+
+    Regras:
+    - "PCP_DB"       -> usa PCP_DB_* (banco operacional da aplicação)
+    - "PROTHEUS_DB"  -> usa PROTHEUS_DB_* (fonte oficial do Protheus)
+    - Qualquer outro -> assume nome literal do banco no mesmo servidor padrão
+    """
+
+    config = AppConfig.from_env()
+    db_key = database.upper().strip()
+
+    if db_key == "PCP_DB":
+        return get_db_connection(
+            config,
+            database=config.pcp_db_name,
+            server=config.pcp_db_server,
+            user=config.pcp_db_uid,
+            password=config.pcp_db_pwd,
         )
-        # endregion
-        return cnxn
-    except pyodbc.Error as e:
-        # region agent log
-        _agent_log(
-            "H4_error_details",
-            "Falha ao conectar no SQL Server",
-            {"error": str(e)},
+
+    elif db_key in ("PROTHEUS_DB", "PROTHEUS"):
+        return get_db_connection(
+            config,
+            database=config.protheus_db_name,
+            server=config.protheus_db_server,
+            user=config.protheus_db_user,
+            password=config.protheus_db_pass,
         )
-        # endregion
-        raise
+
+    # Fallback: usa servidor/credenciais padrão (útil para consultas pontuais)
+    return get_db_connection(config, database=database)

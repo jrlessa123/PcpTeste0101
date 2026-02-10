@@ -1,4 +1,9 @@
 pyodbc
 pandas
 streamlit
+fastapi
+uvicorn[standard]
+requests
 python-dotenv
+celery
+redis
