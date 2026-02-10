@@ -1,18 +1,30 @@
 import pyodbc
 
-from config import AppConfig
+from mypcpweb.backend.config import AppConfig
 
 
-def build_connection_string(config: AppConfig) -> str:
+def build_connection_string(config: AppConfig, database: str | None = None) -> str:
+    db = database or config.db_name
     return (
         f"DRIVER={{{config.db_driver}}};"
         f"SERVER={config.db_server};"
-        f"DATABASE={config.db_name};"
+        f"DATABASE={db};"
         f"UID={config.db_user};"
         f"PWD={config.db_pass};"
         "TrustServerCertificate=yes;"
     )
 
 
-def get_db_connection(config: AppConfig):
-    return pyodbc.connect(build_connection_string(config))
+def get_db_connection(config: AppConfig, database: str | None = None):
+    return pyodbc.connect(build_connection_string(config, database=database))
+
+
+def get_conn(database: str = "PCP_DB"):
+    """Compatibility wrapper used by API dependencies and routes."""
+    config = AppConfig.from_env()
+    db_name = database
+    if database.upper() == "PCP_DB":
+        db_name = config.pcp_db_name
+    elif database.upper() == "PROTHEUS_DB":
+        db_name = config.protheus_db_name
+    return get_db_connection(config, database=db_name)

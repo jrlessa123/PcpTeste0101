@@ -3,7 +3,7 @@
 from dataclasses import dataclass
 from typing import List
 
-from services.pcp_service import PCPService
+from mypcpweb.backend.services.pcp_service import PCPService
 
 
 @dataclass

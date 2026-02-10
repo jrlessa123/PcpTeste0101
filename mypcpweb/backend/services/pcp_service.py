@@ -1,6 +1,6 @@
 import logging
 
-from database import queries
+from mypcpweb.backend.database import queries
 
 logger = logging.getLogger(__name__)
 

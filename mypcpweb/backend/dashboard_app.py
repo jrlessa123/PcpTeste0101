@@ -7,9 +7,9 @@ Executar:
 import pandas as pd
 import streamlit as st
 
-from config import AppConfig
-from database.connection import get_db_connection
-from services.pcp_service import PCPService
+from mypcpweb.backend.config import AppConfig
+from mypcpweb.backend.database.connection import get_db_connection
+from mypcpweb.backend.services.pcp_service import PCPService
 
 st.set_page_config(page_title="PCP Shadow - MVP", layout="wide")
 
