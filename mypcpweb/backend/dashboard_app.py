@@ -5,6 +5,7 @@ Executar:
 """
 
 import pandas as pd
+import pyodbc
 import streamlit as st
 
 from mypcpweb.backend.config import AppConfig
@@ -14,6 +15,14 @@ from mypcpweb.backend.services.pcp_service import PCPService
 st.set_page_config(page_title="PCP Shadow - MVP", layout="wide")
 
 config = AppConfig.from_env()
+
+EMPTY_DATA = {
+    "estoque": [],
+    "carteira": [],
+    "ops_abertas": [],
+    "estoque_negativo": [],
+}
+
 
 @st.cache_data(ttl=60)
 def load_data(filial: str, empresa: str):
@@ -26,6 +35,19 @@ def load_data(filial: str, empresa: str):
         "estoque_negativo": service.get_estoque_negativo_justificativa(),
     }
 
+
+def load_data_or_fallback(filial: str, empresa: str):
+    """Carrega dados do banco ou retorna dados vazios com mensagem de erro."""
+    try:
+        return load_data(filial, empresa), None
+    except pyodbc.OperationalError as e:
+        return EMPTY_DATA.copy(), str(e)
+    except pyodbc.Error as e:
+        return EMPTY_DATA.copy(), str(e)
+    except Exception as e:
+        return EMPTY_DATA.copy(), str(e)
+
+
 st.title("PCP Shadow - Dashboard MVP")
 st.caption("Leitura direta do Protheus para visibilidade rápida do PCP.")
 
@@ -36,7 +58,18 @@ with st.sidebar:
     if st.button("Atualizar"):
         st.cache_data.clear()
 
-data = load_data(filial, empresa)
+data, db_error = load_data_or_fallback(filial, empresa)
+
+if db_error:
+    st.error(
+        "**Não foi possível conectar ao SQL Server.** O dashboard está em modo "
+        "offline (dados vazios). Verifique:\n\n"
+        "• SQL Server está em execução\n"
+        "• Variáveis de ambiente no `.env`: `DB_SERVER`, `DB_NAME`, `DB_USER`, `DB_PASS`\n"
+        "• Nome/instância do servidor correto (ex: `localhost` ou `servidor\\SQLEXPRESS`)\n"
+        "• Firewall e que o SQL Server aceita conexões remotas\n\n"
+        f"*Detalhe técnico:* `{db_error}`"
+    )
 
 tab_estoque, tab_carteira, tab_ops, tab_alertas = st.tabs(
     ["Estoque", "Carteira", "OPs em Aberto", "Alertas"]
